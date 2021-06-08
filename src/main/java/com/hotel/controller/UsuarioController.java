@@ -32,7 +32,7 @@ public class UsuarioController {
 			Model modelo, HttpSession sesion) {
 		boolean res= servicioUsuario.validar(correoe, clave, sesion);
 		if(res) {
-			return "redirect:reservacion/registrar";
+			return "reservacion/registrar";
 		}
 		modelo.addAttribute("error", servicioUsuario.getMensaje());
 		modelo.addAttribute("correoe", correoe);
