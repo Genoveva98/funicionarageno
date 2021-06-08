@@ -59,7 +59,7 @@ public class UsuarioController {
 		}
 		
 		modelo.addAttribute("error", servicioUsuario.getMensaje());
-		return "/usuario/agregar";
+		return "reservacion/registrar";
 	}
 	
 	@GetMapping ("/usuario/informeHabitacion")
