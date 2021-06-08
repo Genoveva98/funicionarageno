@@ -32,7 +32,7 @@ public class UsuarioController {
 			Model modelo, HttpSession sesion) {
 		boolean res= servicioUsuario.validar(correoe, clave, sesion);
 		if(res) {
-			return "reservacion/registrar";
+			return "redirect:reservacion/registrar";
 		}
 		modelo.addAttribute("error", servicioUsuario.getMensaje());
 		modelo.addAttribute("correoe", correoe);
@@ -59,7 +59,7 @@ public class UsuarioController {
 		}
 		
 		modelo.addAttribute("error", servicioUsuario.getMensaje());
-		return "usuario/agregar";
+		return "/usuario/agregar";
 	}
 	
 	@GetMapping ("/usuario/informeHabitacion")
