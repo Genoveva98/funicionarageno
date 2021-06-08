@@ -55,7 +55,7 @@ public class UsuarioController {
 			@RequestParam("clave") String clave, HttpSession sesion) {
 		boolean res = servicioUsuario.agregar(user, clave,sesion);
 		if (res) {
-			return "reservacion/registrar";
+			return "redirect:reservacion/registrar";
 		}
 		
 		modelo.addAttribute("error", servicioUsuario.getMensaje());
