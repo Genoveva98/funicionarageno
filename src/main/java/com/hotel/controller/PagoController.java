@@ -27,7 +27,7 @@ public class PagoController {
 	@GetMapping("/reservacion/registroPago")
 	public String registroPago (Model modelo) {
 		modelo.addAttribute("registroPago", new Pagos());
-		return "/reservacion/registroPago";
+		return "reservacion/registroPago";
 	}
 	
 	@PostMapping("/reservacion/registroPago")
@@ -41,6 +41,6 @@ public class PagoController {
 			if(!servicioPago.registroPago(p, sesion));
 			modelo.addAttribute("error", servicioPago.getMensaje());
 		}
-			return "redirect:/usuario/inicio";
+			return "redirect:usuario/inicio";
 	}
 }

@@ -28,7 +28,7 @@ public class ReservacionController {
 	@GetMapping("/reservacion/registrar")
 		public String registrarReservacion (Model modelo) {
 			modelo.addAttribute("reservacion", new Reservacion());
-			return "/reservacion/registrar";
+			return "reservacion/registrar";
 		}
 	
 	@PostMapping("/reservacion/registrar")
@@ -43,7 +43,7 @@ public class ReservacionController {
 			if(!servicioReservacion.registrar(r, sesion));
 			modelo.addAttribute("error", servicioReservacion.getMensaje());
 		}
-			return "redirect:/reservacion/registroPago";
+			return "redirect:reservacion/registroPago";
 	}
 	
 }

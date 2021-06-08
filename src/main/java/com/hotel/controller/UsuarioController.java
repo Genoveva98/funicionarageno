@@ -32,7 +32,7 @@ public class UsuarioController {
 			Model modelo, HttpSession sesion) {
 		boolean res= servicioUsuario.validar(correoe, clave, sesion);
 		if(res) {
-			return "redirect:/reservacion/registrar";
+			return "redirect:reservacion/registrar";
 		}
 		modelo.addAttribute("error", servicioUsuario.getMensaje());
 		modelo.addAttribute("correoe", correoe);
@@ -55,11 +55,11 @@ public class UsuarioController {
 			@RequestParam("clave") String clave, HttpSession sesion) {
 		boolean res = servicioUsuario.agregar(user, clave,sesion);
 		if (res) {
-			return "redirect:/reservacion/registrar";
+			return "redirect:reservacion/registrar";
 		}
 		
 		modelo.addAttribute("error", servicioUsuario.getMensaje());
-		return "/usuario/agregar";
+		return "usuario/agregar";
 	}
 	
 	@GetMapping ("/usuario/informeHabitacion")
