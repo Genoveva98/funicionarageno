@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de habitaciones</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <center><img src="../Imagenes/logo-hotel.png" alt="" ></center>
+      <nav class="navbar navbar-inverse ">
+        <div class="container-fluid">
+           <div class="navbar-header">
+            <a class="navbar-brand" th:href="@{/usuario/inicio}">Inicio</a>
+            <a class="navbar-brand" th:href="@{/usuario/contacto}">Contacto</a>
+            <a class="navbar-brand" th:href="@{/usuario/validar}">Reservacion</a>
+            <a class="navbar-brand" th:href="@{/usuario/informeHabitacion}">Habitaciones</a>
+            <a class="navbar-brand" th:href="@{/usuario/validar}">Login</a>
+          </div> 
+        </div>
+      </nav>
+       <div class="jumbotron text-center">
+        <h1>Habitaciones</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            
+          </div>
+          <div class="col-sm-6">
+           
+            <fieldset>
+            
+            <div class="thumbnail text-center">
+                <h3>Habitacion Doble</h3> <br>
+                
+                <img src= "../Imagenes/habitaciondoble.jpg"  alt="HabitacionDoble" style="width:100%">
+                <div class="caption">
+                    <p> - 1 Cama Doble -No Reembolsable - Wi-Fi gratis -Precio <strong>$650</strong></p>
+                </div>
+            </div>
+
+            <div class="thumbnail text-center">
+                <h2>Habitacion Doble - 2 camas</h2>
+                <img src= "../Imagenes/habitaciondoble2camas.jpg"  alt="HabitacionDoble2" style="width:100%">
+                <div class="caption">
+                    <p> - 2 camas dobles - 1 Cama individual - 4 huespedes - No Reembolsable - Wi-Fi gratis -Precio <strong>$850</strong> </p> 
+                </div>
+            </div>
+
+            <div class="thumbnail text-center text-center">
+                <h2>Suit con cama Extragrande</h2>
+                <img src= "../Imagenes/suitconcamaextragrande.jpg"  alt="suitconcamaextragrande" style="width:100%">
+                <div class="caption">
+                    <p> -1 camas King size -No Reembolsable - Wi-Fi gratis -Precio <strong>$850</strong> </p>  
+                </div>
+            </div>
+
+            <div class="thumbnail text-center">
+                <h2>Habitacion Familiar</h2>
+                <img src= "../Imagenes/habitacionfamiliar.jpg"  alt="suitconcamaextragrande" style="width:100%">
+                <div class="caption">
+                    <p> - 1 Cama doble - 1 Cama individual - 3 huespedes - No Reembolsable - Wi-Fi gratis -Precio <strong>$950</strong></p>  
+                </div>
+            </div>
+
+            <div class="thumbnail text-center">
+                <h2>Habitacion Familiar - 5 huespedes</h2>
+                <img src= "../Imagenes/habitacionfamiliar5personas.png"  alt="suitconcamaextragrande" style="width:100%">
+                <div class="caption">
+                    <p> - 2 camas dobles - 1 Cama individual  - No Reembolsable - Wi-Fi gratis -Precio <strong>$950</strong></p>  
+                </div>
+            </div>            
+        </fieldset>
+          </div>
+        
+          <div class="col-sm-3">
+           
+          </div>
+        </div>
+      </div>
+      <div class="alert alert-warning text-center">
+        <strong>Precaucion!</strong> El precio de las habitaciones estan sujetos a cambio sin previo aviso.
+      </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>

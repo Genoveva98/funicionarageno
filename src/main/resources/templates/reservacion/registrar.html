@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Agregar Reservacion</title> 
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+	integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+	crossorigin="anonymous">
+	<script src="/js/jquery-3.5.0.min.js"></script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>	
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="display-4">Registro de reservaciones.</h1>
+			<p class="lead">Introduce los datos de registro.</p>
+			<hr class="my-4">
+			<p class="text-danger">*Todos los datos son obligatorios.</p>
+			<div class="row">
+				<div class="col-3"></div>
+				<div class="col-6">
+				<form action="#" th:action="@{registrar}" th:object="${reservacion}" method="post">
+						<label>Fecha de Entrada: </label>
+						<input type="date" required="required" th:field="*{fechaentrada}"
+							class="form-control" min="2021-05-04"
+							max="2021-12-31" />
+						<label>Fecha de Salida: </label>
+						<input type="date" required="required" th:field="*{fechasalida}"
+							class="form-control" min="2021-05-05"
+							max="2021-12-31" />	
+						<label>Adultos: </label>
+						<input type="number" required="required" th:field="*{numadultos}"
+							class="form-control" placeholder="Maximo 15 Pers." min="1"
+							max="15" />
+						<label>Niños: </label>
+						<input type="number" required="required" th:field="*{numninios}"
+							class="form-control" placeholder="" min="0"
+							max="5" />
+						<label>Mascotas: </label>
+						<input type="number" required="required" th:field="*{nummascotas}"
+							class="form-control" min="0"
+							max="2" />
+						<label>Tipo de Habitaciones: </label>
+						<select th:field="*{tipohabitacion}" class="form-control">
+						<option value="Sencilla">Sencilla</option>
+						<option value="Doble">Doble</option>
+						<option value="Suite">Suit</option>
+						</select>
+						<label>Num. de Habitaciones: </label>
+						<input type="number" required="required" th:field="*{numhabitacion}"
+							class="form-control" 
+							min="1" max="15" />
+						<label>Telefono: </label>
+						<input type="text" required="required" th:field="*{telefono}"
+							class="form-control" placeholder="A 10 digitos"
+							maxlength="10" />
+						</br>
+						<p>
+							<input type="submit" class="button" value="Siguiente" /> </br></br><input type="reset" class="button"
+								value="Borrar datos" />
+						</p>
+						
+					</form>
+					
+					<div th:if="*{error != null}"
+						class="alert alert-warning alert-dismissible fade show"
+						role="alert">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<h4 th:text=*{error}></h4>	
+					</div>
+				</div>
+				<div class="col-3"></div>
+			</div>
+				<hr class="my-4">
+			<div class="row">
+				<div class="col-2"></div>
+				<div class="col-8">
+					<p>Desarrollo de Aplicaciones Web.Genoveva Gonzalez.</p>
+					<p>ITSSNP 2021.</p> 
+				</div>
+				<div class="col-2"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
